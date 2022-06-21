@@ -11,14 +11,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 120px;
+  margin: 0 5%;
   color: white;
   box-sizing: border-box;
 }
 
 .top-bar-pagename-box {
   cursor: pointer;
-  margin: 10px 0;
 }
 .top-bar-pagename-1 {
   font-size: 70px;
@@ -45,6 +44,41 @@
 
 .top-bar-menu-box span:hover {
   transform: scale(1.2);
+}
+
+/*top-bar-mobile*/
+.mobile-top-bar-totalmenu {
+  display: none;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+.mobile-top-bar-three {
+  width: 33%;
+  height: 100%;
+  padding: 5px 0;
+  box-sizing: border-box;
+}
+
+.mobile-top-bar-pagename-box {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.mobile-top-bar-pagename-2 {
+  align-self: end;
+}
+
+.mobile-top-bar-more-btn {
+  display: flex;
+  height: 100%;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  left: -10%;
+  cursor: pointer;
 }
 /*top-img*/
 .top-img-box {
@@ -111,6 +145,8 @@
   color: #b773be;
 }
 
+/*반응형*/
+/*300 미만*/
 @media screen and (max-width: 300px) {
   .top-img-box {
     height: 300px;
@@ -118,45 +154,71 @@
   .top-bar-box {
     height: 50px;
   }
-
+  .top-bar-pagename-1 {
+    font-size: 45px;
+  }
+  .top-bar-pagename-2 {
+    font-size: 15px;
+  }
   .top-text-box p:first-child {
     font-size: 20px;
     font-weight: 600;
     padding-bottom: 10px;
   }
-
   .top-text-box p:last-child {
     font-size: 10px;
     color: #b773be;
   }
+  .top-bar-totalmenu {
+    display: none;
+  }
+  .mobile-top-bar-totalmenu {
+    display: flex;
+  }
 }
 
+/*모바일*/
 @media screen and (min-width: 300px) and (max-width: 768px) {
   .top-img-box {
     height: 400px;
   }
-
   .top-bar-box {
     height: 60px;
+  }
+  .top-bar-pagename-1 {
+    font-size: 60px;
+  }
+  .top-bar-pagename-2 {
+    font-size: 20px;
   }
   .top-text-box p:first-child {
     font-size: 30px;
     font-weight: 600;
     padding-bottom: 10px;
   }
-
   .top-text-box p:last-child {
     font-size: 10px;
     color: #b773be;
   }
+  .top-bar-totalmenu {
+    display: none;
+  }
+  .mobile-top-bar-totalmenu {
+    display: flex;
+  }
 }
 
+/*테블릿*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .top-img-box {
     height: 500px;
   }
+  .top-bar-menu-box {
+    width: 50%;
+  }
 }
 
+/*pc*/
 @media screen and (min-width: 1024px) {
   .top-img-box {
     height: 700px;
