@@ -1,0 +1,48 @@
+.middle-two-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.middle-two-box-img1 {
+  background: url("../img/middle-two12.png") no-repeat center;
+  height: 600px;
+}
+
+.middle-two-box-img2 {
+  background: url("../img/middle-two2.png") no-repeat center fixed;
+  height: 800px;
+}
+
+.middle-two-box-img3 {
+  background: url("../img/middle-two10.jpg") no-repeat center;
+  height: 600px;
+}
+
+.middle-two-box {
+  width: 100%;
+  background-size: cover;
+  object-fit: cover;
+  position: relative;
+}
+
+.middle-two-box-img1::after,
+.middle-two-box-img3::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.middle-two-box-img2::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  position: absolute;
+}
