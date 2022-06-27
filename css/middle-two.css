@@ -141,3 +141,43 @@
 .middle-two-circle-btn:hover + .middle-two-box-img3::after {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+/*반응형*/
+/*300 미만*/
+@media screen and (max-width: 300px) {
+}
+
+/*모바일*/
+@media screen and (min-width: 300px) and (max-width: 767px) {
+  .middle-two-box {
+  }
+
+  .middle-two-box-img {
+    height: 500px;
+  }
+  .middle-two-text-span {
+    top: 100px;
+    left: 50%;
+    font-size: 60px;
+    transform: translate(-50%, -50%);
+  }
+  .middle-two-text {
+    left: 50%;
+    top: 170px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+  .middle-two-circle-btn {
+    top: 60%;
+  }
+}
+
+/*테블릿*/
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+}
+
+/*pc*/
+@media screen and (min-width: 1024px) {
+}
