@@ -4,7 +4,7 @@ window.addEventListener("scroll", function () {
   let value = window.scrollY;
   console.log("scrollY", value);
 
-  if (1833 > value || value > 2860) {
+  if (1833 > value || value > 2760) {
     middleTwoTextRight[0].style.animation =
       "disappear  1s ease-in-out forwards";
     middleTwoTextRight[1].style.animation =
