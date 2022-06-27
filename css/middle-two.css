@@ -1,12 +1,20 @@
+/*box, img*/
 .middle-two-body {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
+.middle-two-box {
+  display: flex;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
 .middle-two-box-img1 {
-  background: url("../img/middle-two12.png") no-repeat center;
-  height: 600px;
+  height: 700px;
+  background: url("../img/middle-two1.png") no-repeat center;
 }
 
 .middle-two-box-img2 {
@@ -15,15 +23,15 @@
 }
 
 .middle-two-box-img3 {
-  background: url("../img/middle-two10.jpg") no-repeat center;
-  height: 600px;
+  background: url("../img/middle-two3.jpg") no-repeat center;
+  height: 700px;
 }
 
-.middle-two-box {
+.middle-two-box-img {
   width: 100%;
   background-size: cover;
   object-fit: cover;
-  position: relative;
+  transition: all 0.2s ease-in-out;
 }
 
 .middle-two-box-img1::after,
@@ -35,6 +43,7 @@
   top: 0;
   left: 0;
   position: absolute;
+  transition: all 0.2s ease-in;
 }
 
 .middle-two-box-img2::after {
@@ -45,4 +54,90 @@
   top: 0;
   left: 0;
   position: absolute;
+}
+
+/*text*/
+.middle-two-text-span {
+  position: absolute;
+  top: 120px;
+  color: white;
+  font-size: 80px;
+  font-weight: 600;
+}
+.middle-two-text {
+  position: absolute;
+  top: 250px;
+  color: white;
+  font-size: 15px;
+  word-spacing: 8px;
+  opacity: 0.8;
+}
+
+.middle-two-text-left {
+  left: 150px;
+}
+
+.middle-two-text-right {
+  right: 150px;
+  z-index: 2;
+}
+
+@keyframes slide {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+  to {
+    right: 150px;
+  }
+}
+
+@keyframes disappear {
+  from {
+    right: 150px;
+  }
+  to {
+    right: -300px;
+    opacity: 0;
+  }
+}
+/*btn*/
+.middle-two-circle-btn {
+  display: flex;
+  width: 120px;
+  height: 120px;
+  background-color: var(--middle-one-background-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+.middle-two-icon {
+  color: var(--middle-one-blue);
+}
+
+.middle-two-circle-btn:hover {
+  background-color: var(--middle-hover);
+  transform: translate(-50%, -50%) scale(1.3) rotate(90deg);
+}
+
+.middle-two-circle-btn:hover .middle-two-icon {
+  color: var(--pink-color);
+}
+
+.middle-two-circle-btn:hover + .middle-two-box-img1,
+.middle-two-circle-btn:hover + .middle-two-box-img3 {
+  transform: scale(1.1);
+}
+
+.middle-two-circle-btn:hover + .middle-two-box-img1::after,
+.middle-two-circle-btn:hover + .middle-two-box-img3::after {
+  background-color: rgba(0, 0, 0, 0.5);
 }
