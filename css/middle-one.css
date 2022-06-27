@@ -87,12 +87,12 @@
 .middle-one-btn-menu:hover {
   transform: scale(1.1);
   box-shadow: 2px 2px 30px 10px rgba(45, 45, 45, 0.8);
-  background-color: rgb(9, 9, 54);
+  background-color: var(--middle-hover);
   color: white;
 }
 
 .middle-one-btn-menu:hover .middle-one-btn-menu-icon {
-  color: rgb(210, 82, 174);
+  color: var(--pink-color);
 }
 
 .middle-one-btn-menu:hover .middle-one-btn-menu-text {
