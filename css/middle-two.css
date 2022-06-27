@@ -156,6 +156,8 @@
     height: 500px;
   }
   .middle-two-text-span {
+    display: flex;
+    justify-content: center;
     top: 100px;
     left: 50%;
     font-size: 60px;
